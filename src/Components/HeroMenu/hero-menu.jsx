@@ -30,13 +30,13 @@ export default class HeroMenu extends React.Component {
         },
         {
           title: "High Heels",
-          size: "small",
+          size: "large",
           slug: "high-heels",
           id: 3,
         },
         {
           title: "Jewelry",
-          size: "small",
+          size: "large",
           slug: "jewelry",
           id: 4,
         },
