@@ -1,0 +1,65 @@
+.menu-item {
+  flex-grow: 1;
+  height: 350px;
+  min-width: 250px;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  margin: 5px;
+  transition: all .25s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+
+.menu-item--small {
+  width: 30%;
+}
+
+.menu-item--large {
+  width: 45%;
+}
+
+.menu-item--makeup {
+  background-image: url(../../Images/makeup.jpg);
+}
+
+.menu-item--wigs {
+  background-image: url(../../Images/wigs.jpg);
+}
+
+.menu-item--costumes {
+  background-image: url(../../Images/costumes.jpg);
+}
+
+.menu-item--high-heels {
+  background-image: url(../../Images/high-heels.jpg);
+}
+
+.menu-item--jewelry {
+  background-image: url(../../Images/jewelry.jpg);
+}
+
+.menu-item__info {
+  background-color: #ffffffe3;
+  display: inline-block;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  color: #000000;
+}
+
+.menu-item__header {
+  margin: 10px;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.menu-item__subheader {
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
