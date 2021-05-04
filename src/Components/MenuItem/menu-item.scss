@@ -10,14 +10,17 @@
   border-radius: 8px;
   border: 3px solid #ffffff;
   box-sizing: border-box;
+  opacity: .85;
+  position: relative;
 
   &:hover,
   &:focus {
-    transform: scale(1.03);
+    opacity: 1;
 
     .menu-item__info {
-      transition: background-color .5s ease;
-      background-color: #ffffffe3;
+      transition: all .5s ease;
+      background-color: #2e2e2e;
+      color: #ffffffe3;
     }
   }
 }
@@ -31,23 +34,23 @@
 }
 
 .menu-item--makeup {
-  background-image: url(../../Images/makeup.jpg);
+  background-image: url(../../Images/Menu/makeup.jpg);
 }
 
 .menu-item--wigs {
-  background-image: url(../../Images/wigs.jpg);
+  background-image: url(../../Images/Menu/wigs.jpg);
 }
 
 .menu-item--costumes {
-  background-image: url(../../Images/costumes.jpg);
+  background-image: url(../../Images/Menu/costumes.jpg);
 }
 
 .menu-item--high-heels {
-  background-image: url(../../Images/high-heels.jpg);
+  background-image: url(../../Images/Menu/high-heels.jpg);
 }
 
 .menu-item--jewelry {
-  background-image: url(../../Images/jewelry.jpg);
+  background-image: url(../../Images/Menu/jewelry.jpg);
 }
 
 .menu-item__info {
@@ -58,6 +61,10 @@
   text-align: center;
   color: #000000;
   border-radius: 5px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .menu-item__header {
