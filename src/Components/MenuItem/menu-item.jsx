@@ -1,14 +1,15 @@
 import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 
 import './menu-item.scss';
 
-const MenuItem = ({title, size, slug}) => (
-  <a className={`menu-item menu-item--${slug} menu-item--${size}`} href={`/${slug}`}>
+const MenuItem = ({title, size, slug, history}) => (
+  <Link className={`menu-item menu-item--${slug} menu-item--${size}`} to={`shop/${slug}`}>
     <div className="menu-item__info">
       <h2 className="menu-item__header">{title}</h2>
       <p className="menu-item__subheader">Browse</p>
     </div>
-  </a>
+  </Link>
 );
 
-export default MenuItem;
+export default withRouter(MenuItem);

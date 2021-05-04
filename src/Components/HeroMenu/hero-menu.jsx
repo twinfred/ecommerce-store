@@ -48,12 +48,10 @@ export default class HeroMenu extends React.Component {
     return (
       <div className="hero-menu">
         {
-          this.state.menuItems.map(({title, size, slug, id}) =>
+          this.state.menuItems.map(({id, ...menuItemProps}) =>
             <MenuItem
-              title={title}
-              size={size}
-              slug={slug}
               key={id}
+              {...menuItemProps}
             />
           )
         }
