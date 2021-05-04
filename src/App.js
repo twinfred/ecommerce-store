@@ -11,7 +11,6 @@ const CategoryPage = (props) => {
   return (
     <div>
       <Link to="/">Go Home</Link>
-      <button onClick={() => props.history.push('/shop/' + (parseInt(categoryId) + 1))}>Next</button>
       <h1>Category Page {categoryId}</h1>
     </div>
   )
