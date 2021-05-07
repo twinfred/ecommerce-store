@@ -12,11 +12,13 @@ const CollectionPreview = ({title, slug, items, match}) => (
         <h2 className="collection-preview__header">{title}</h2>
       </Link>
     </div>
+    <ul className="collection-preview__options">
     {
       items.slice(0, 4).map(({id, ...itemProps}) => (
         <CollectionItem key={id} {...itemProps}/>
       ))
     }
+    </ul>
   </div>
 )
 

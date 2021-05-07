@@ -9,17 +9,18 @@ const addToCart = (event) => {
 }
 
 const CollectionItem = ({name, price, slug, imageUrl, match}) => (
-  <div className="collection-item">
-    <Link to={`${match.url}/${slug}`} className="collection-item__link">
+  // TODO: Refactor this to fix the screen reader accessibility of the button - it is skipped by NVDA
+  <li className="collection-item">
+    <Link to={`${match.url}/${slug}`} className="collection-item__link" aria-label={name}>
       <div className="collection-item__image" style={{backgroundImage: `url(${imageUrl})`}}>
-        <button className="collection-item__add-to-cart" onClick={addToCart}>Add to Cart</button>
+        <button className="collection-item__add-to-cart" onClick={addToCart} aria-hidden="false" tabIndex="0">Add to Cart</button>
       </div>
       <div className="collection-item__details">
         <h3 className="collection-item__header">{name}</h3>
         <span className="collection-item__price">${price}</span>
       </div>
     </Link>
-  </div>
+  </li>
 )
 
 export default withRouter(CollectionItem);
