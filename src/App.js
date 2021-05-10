@@ -7,6 +7,7 @@ import A11yRouteAnnoucer from './Components/A11yRouteAnnouncer/a11y-route-announ
 import Header from './Components/Header/header';
 import Homepage from './Pages/Homepage/homepage';
 import ShopPage from './Pages/Shop/shop';
+import SignInSignUpPage from './Pages/SignInSignUp/sign-in-sign-up';
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/shop" component={ShopPage} />
-          {/* <Route path="/shop/:categoryId" component={CategoryPage} /> */}
+          <Route path="/shop" component={ShopPage} />
+          <Route path="/signin" component={SignInSignUpPage} />
         </Switch>
       </main>
     </>
