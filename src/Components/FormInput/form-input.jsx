@@ -2,7 +2,7 @@ import React from 'react';
 
 import './form-input.scss';
 
-const FormInput = React.forwardRef(({ label, id, ...otherProps }, ref) => {
+const FormInput = React.forwardRef(({ label, id, ...props }, ref) => {
   const labelRef = React.useRef();
 
   const handleChange = (event) => {
@@ -13,9 +13,9 @@ const FormInput = React.forwardRef(({ label, id, ...otherProps }, ref) => {
     }
   }
 
-  return(
+  return (
     <div className="form-input">
-      <input id={id} className="form-input__input" {...otherProps} ref={ref} onChange={handleChange}/>
+      <input id={id} className="form-input__input" {...props} ref={ref} onChange={handleChange} />
       {
         label ? <label htmlFor={id} className="form-input__label" ref={labelRef}>{label}</label> : null
       }
